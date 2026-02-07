@@ -1,7 +1,11 @@
 
 import React from 'react';
 
-export const Pricing: React.FC = () => {
+interface PricingProps {
+  onRequestQuote: () => void;
+}
+
+export const Pricing: React.FC<PricingProps> = ({ onRequestQuote }) => {
   return (
     <section id="pricing" className="py-32 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-24">
@@ -40,7 +44,7 @@ export const Pricing: React.FC = () => {
               </div>
             ))}
           </div>
-          <button className="w-full py-6 bg-red-600 text-white text-2xl font-black rounded-[2rem] hover:bg-red-700 hover:scale-[1.02] transition-all shadow-xl shadow-red-600/30">Richiedi Sopralluogo</button>
+          <button onClick={onRequestQuote} className="w-full py-6 bg-red-600 text-white text-2xl font-black rounded-[2rem] hover:bg-red-700 hover:scale-[1.02] transition-all shadow-xl shadow-red-600/30">Richiedi Sopralluogo</button>
         </div>
 
         <div className="flex flex-col gap-8">
@@ -53,7 +57,7 @@ export const Pricing: React.FC = () => {
               Il tuo nuovo bagno di design pronto in soli 7 giorni lavorativi, materiali inclusi.
             </p>
           </div>
-          
+
           <div className="bg-white p-12 rounded-[3rem] border-2 border-dashed border-red-200 flex flex-col justify-center h-full group hover:bg-red-600 hover:text-white transition-all duration-500 cursor-pointer shadow-sm hover:shadow-2xl">
             <div className="flex items-center gap-6 mb-8">
               <div className="w-16 h-16 bg-red-50 border-2 border-red-600 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 group-hover:bg-white transition-all">🍳</div>

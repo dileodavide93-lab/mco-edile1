@@ -1,7 +1,11 @@
 
 import React, { useState } from 'react';
 
-export const Hero: React.FC = () => {
+interface HeroProps {
+  onRequestQuote: () => void;
+}
+
+export const Hero: React.FC<HeroProps> = ({ onRequestQuote }) => {
   const [showPhone, setShowPhone] = useState(false);
 
   return (
@@ -26,7 +30,7 @@ export const Hero: React.FC = () => {
               Chiamaci ora
             </button>
           )}
-          <button className="px-6 py-2 bg-red-600 text-white rounded-lg font-bold hover:bg-red-700 transition-all shadow-lg shadow-red-600/30">Richiedi Preventivo</button>
+          <button onClick={onRequestQuote} className="px-6 py-2 bg-red-600 text-white rounded-lg font-bold hover:bg-red-700 transition-all shadow-lg shadow-red-600/30">Richiedi Preventivo</button>
         </div>
       </nav>
 
@@ -40,7 +44,7 @@ export const Hero: React.FC = () => {
             Progettazione architettonica e ristrutturazioni d'interni complete. Trasformiamo i tuoi spazi con un servizio chiavi in mano d'eccellenza.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="px-10 py-5 bg-red-600 text-white text-xl font-bold rounded-xl hover:scale-105 transition-transform shadow-xl shadow-red-600/30">Inizia il Progetto</button>
+            <button onClick={onRequestQuote} className="px-10 py-5 bg-red-600 text-white text-xl font-bold rounded-xl hover:scale-105 transition-transform shadow-xl shadow-red-600/30">Inizia il Progetto</button>
             <div className="flex items-center gap-4 px-6 py-4 bg-white border border-zinc-200 rounded-xl cursor-pointer hover:bg-zinc-50 transition-colors group">
               <div className="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-100 transition-colors">
                 <svg className="text-red-600" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -71,7 +75,7 @@ export const Hero: React.FC = () => {
             </div>
             <button className="w-full py-4 bg-red-600 text-white font-bold rounded-xl hover:bg-red-700 transition-colors">Guarda i nostri Servizi</button>
           </div>
-          
+
           <div className="absolute -bottom-6 -right-6 bg-white border-2 border-red-600 p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-pulse">
             <div className="w-3 h-3 bg-red-600 rounded-full"></div>
             <span className="font-bold text-sm">Sconto 50% su Progettazione 3D</span>

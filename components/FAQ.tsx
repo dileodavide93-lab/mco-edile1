@@ -24,7 +24,11 @@ const faqs = [
   }
 ];
 
-export const FAQ: React.FC = () => {
+interface FAQProps {
+  onRequestQuote: () => void;
+}
+
+export const FAQ: React.FC<FAQProps> = ({ onRequestQuote }) => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
@@ -39,7 +43,7 @@ export const FAQ: React.FC = () => {
              <div className="relative z-10">
                 <h3 className="text-3xl font-bold mb-6">Pronto a iniziare?</h3>
                 <p className="text-red-50 text-lg mb-8">Prenota un sopralluogo tecnico senza impegno. Valuteremo insieme il tuo progetto.</p>
-                <button className="px-8 py-4 bg-white text-red-600 font-bold rounded-xl hover:scale-105 transition-transform">Richiedi Sopralluogo</button>
+                <button onClick={onRequestQuote} className="px-8 py-4 bg-white text-red-600 font-bold rounded-xl hover:scale-105 transition-transform">Richiedi Sopralluogo</button>
              </div>
              <div className="absolute top-0 right-0 w-64 h-64 bg-red-800 rounded-full blur-3xl opacity-50 -mr-32 -mt-32"></div>
           </div>
@@ -48,7 +52,7 @@ export const FAQ: React.FC = () => {
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
             <div key={idx} className="border-b-2 border-red-50 pb-4">
-              <button 
+              <button
                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
                 className="w-full flex justify-between items-center py-6 text-left group"
               >
