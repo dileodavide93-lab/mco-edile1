@@ -19,7 +19,7 @@ const App: React.FC = () => {
       {/* Ambient glow effects */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-red-600/10 rounded-full blur-[150px] glow-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-orange-500/8 rounded-full blur-[120px] glow-pulse" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-red-500/8 rounded-full blur-[120px] glow-pulse" style={{ animationDelay: '1.5s' }}></div>
       </div>
 
       <div className="relative z-10">

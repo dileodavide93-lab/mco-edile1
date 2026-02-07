@@ -62,7 +62,7 @@ export const Benefits: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
         {benefits.map((benefit, idx) => (
           <div key={idx} className="glass rounded-2xl p-6 sm:p-8 group hover:bg-white/[0.08] transition-all duration-300">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500/20 to-orange-500/20 flex items-center justify-center mb-5 border border-red-500/20 text-red-400 group-hover:scale-110 transition-transform">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600/20 to-red-400/20 flex items-center justify-center mb-5 border border-red-500/20 text-red-400 group-hover:scale-110 transition-transform">
               {benefit.icon}
             </div>
             <h3 className="text-xl sm:text-2xl font-bold mb-2">{benefit.title}</h3>

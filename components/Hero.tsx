@@ -36,7 +36,7 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote }) => {
               Chiamaci
             </button>
           )}
-          <button onClick={onRequestQuote} className="px-6 py-2.5 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-xl font-bold hover:shadow-lg hover:shadow-red-500/25 hover:scale-105 transition-all">Preventivo Gratis</button>
+          <button onClick={onRequestQuote} className="px-6 py-2.5 bg-gradient-to-r from-red-600 to-red-500 text-white rounded-xl font-bold hover:shadow-lg hover:shadow-red-500/25 hover:scale-105 transition-all">Preventivo Gratis</button>
         </div>
 
         {/* Mobile hamburger */}
@@ -54,7 +54,7 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote }) => {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="md:hidden glass rounded-2xl p-5 mb-8 flex flex-col gap-3">
-          <button onClick={() => { onRequestQuote(); setMobileMenuOpen(false); }} className="w-full py-3.5 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-xl text-base">
+          <button onClick={() => { onRequestQuote(); setMobileMenuOpen(false); }} className="w-full py-3.5 bg-gradient-to-r from-red-600 to-red-500 text-white font-bold rounded-xl text-base">
             Preventivo Gratis
           </button>
           <a href="tel:+393920244301" className="w-full py-3.5 glass-light text-white font-semibold rounded-xl text-base text-center flex items-center justify-center gap-2">
@@ -81,7 +81,7 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote }) => {
             Ristrutturazioni complete, dal progetto alle chiavi in mano. Noi ci pensiamo a tutto, tu ti godi il risultato.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 md:mb-12">
-            <button onClick={onRequestQuote} className="px-8 py-4 sm:px-10 sm:py-5 bg-gradient-to-r from-red-500 to-orange-500 text-white text-lg sm:text-xl font-bold rounded-2xl hover:scale-105 transition-all shadow-xl shadow-red-500/20">Inizia ora</button>
+            <button onClick={onRequestQuote} className="px-8 py-4 sm:px-10 sm:py-5 bg-gradient-to-r from-red-600 to-red-500 text-white text-lg sm:text-xl font-bold rounded-2xl hover:scale-105 transition-all shadow-xl shadow-red-500/20">Inizia ora</button>
             <button className="flex items-center justify-center gap-3 px-6 py-4 glass rounded-2xl cursor-pointer hover:bg-white/10 transition-colors group">
               <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors flex-shrink-0">
                 <svg className="text-red-400" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
@@ -93,13 +93,13 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote }) => {
           {/* Social proof */}
           <div className="flex items-center gap-4">
             <div className="flex -space-x-2">
-              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-red-400 to-orange-400 border-2 border-[#0a0a0a] flex items-center justify-center text-[10px] font-bold">MR</div>
+              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-red-500 to-red-400 border-2 border-[#0a0a0a] flex items-center justify-center text-[10px] font-bold">MR</div>
               <div className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 border-2 border-[#0a0a0a] flex items-center justify-center text-[10px] font-bold">LB</div>
               <div className="w-9 h-9 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 border-2 border-[#0a0a0a] flex items-center justify-center text-[10px] font-bold">GV</div>
               <div className="w-9 h-9 rounded-full bg-zinc-700 border-2 border-[#0a0a0a] flex items-center justify-center text-[10px] font-bold text-zinc-300">+197</div>
             </div>
             <div>
-              <div className="flex gap-0.5 text-orange-400 text-sm">{'★'.repeat(5)}</div>
+              <div className="flex gap-0.5 text-red-400 text-sm">{'★'.repeat(5)}</div>
               <p className="text-zinc-500 text-xs font-medium">200+ clienti soddisfatti</p>
             </div>
           </div>
@@ -107,14 +107,14 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote }) => {
 
         {/* Stats card */}
         <div className="relative group">
-          <div className="absolute -inset-4 bg-gradient-to-tr from-red-500/20 via-orange-500/10 to-transparent rounded-[2rem] blur-2xl group-hover:from-red-500/30 transition-all"></div>
+          <div className="absolute -inset-4 bg-gradient-to-tr from-red-600/20 via-red-500/10 to-transparent rounded-[2rem] blur-2xl group-hover:from-red-500/30 transition-all"></div>
           <div className="relative glass p-6 sm:p-8 rounded-2xl sm:rounded-3xl overflow-hidden">
             <div className="flex justify-between items-start mb-6">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-xs font-semibold text-zinc-400 uppercase tracking-wider">I nostri numeri</span>
               </div>
-              <span className="px-3 py-1 bg-gradient-to-r from-red-500/20 to-orange-500/20 text-red-400 text-[10px] font-bold rounded-full uppercase tracking-widest border border-red-500/20">Live</span>
+              <span className="px-3 py-1 bg-gradient-to-r from-red-600/20 to-red-400/20 text-red-400 text-[10px] font-bold rounded-full uppercase tracking-widest border border-red-500/20">Live</span>
             </div>
 
             <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6">
@@ -142,13 +142,13 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote }) => {
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-400 to-cyan-400 flex items-center justify-center text-[10px] font-bold flex-shrink-0">LR</div>
                 <div>
                   <p className="text-sm font-semibold">Laura R.</p>
-                  <div className="flex gap-0.5 text-orange-400 text-[10px]">{'★'.repeat(5)}</div>
+                  <div className="flex gap-0.5 text-red-400 text-[10px]">{'★'.repeat(5)}</div>
                 </div>
               </div>
               <p className="text-zinc-400 text-sm leading-relaxed">"Puntuali, precisi, casa nuova in 9 settimane. Non ci potevo credere."</p>
             </div>
 
-            <button onClick={onRequestQuote} className="w-full py-3.5 sm:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-red-500/25 transition-all text-sm sm:text-base">Preventivo Gratuito</button>
+            <button onClick={onRequestQuote} className="w-full py-3.5 sm:py-4 bg-gradient-to-r from-red-600 to-red-500 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-red-500/25 transition-all text-sm sm:text-base">Preventivo Gratuito</button>
           </div>
 
           <div className="absolute -bottom-3 -right-1 sm:-bottom-5 sm:-right-4 glass p-3 sm:p-4 rounded-xl sm:rounded-2xl flex items-center gap-2 sm:gap-3 float-animation max-w-[220px] sm:max-w-none">

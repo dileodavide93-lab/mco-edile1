@@ -34,7 +34,7 @@ export const HowItWorks: React.FC = () => {
           {steps.map((step, idx) => (
             <div key={idx} className="glass rounded-2xl sm:rounded-3xl p-7 sm:p-10 relative overflow-hidden group hover:bg-white/[0.08] transition-all duration-300">
               <span className="text-6xl sm:text-7xl font-black text-white/[0.04] absolute top-4 right-6 select-none group-hover:text-white/[0.08] transition-colors">{step.num}</span>
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500/20 to-orange-500/20 flex items-center justify-center mb-5 border border-red-500/20">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600/20 to-red-400/20 flex items-center justify-center mb-5 border border-red-500/20">
                 <span className="text-red-400 font-black text-sm">{step.num}</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold mb-3">{step.title}</h3>

@@ -63,7 +63,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({ isOpen, onClose }) => {
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold mb-3">Richiesta inviata!</h3>
             <p className="text-zinc-400 text-base sm:text-lg mb-6 sm:mb-8">Ti ricontatteremo entro 24 ore per fissare un sopralluogo gratuito.</p>
-            <button onClick={handleClose} className="px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-red-500/25 transition-all">
+            <button onClick={handleClose} className="px-8 py-3 bg-gradient-to-r from-red-600 to-red-500 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-red-500/25 transition-all">
               Perfetto
             </button>
           </div>
@@ -145,7 +145,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({ isOpen, onClose }) => {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white text-lg font-bold rounded-xl hover:shadow-lg hover:shadow-red-500/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 bg-gradient-to-r from-red-600 to-red-500 text-white text-lg font-bold rounded-xl hover:shadow-lg hover:shadow-red-500/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {submitting ? 'Invio in corso...' : 'Invia richiesta'}
               </button>

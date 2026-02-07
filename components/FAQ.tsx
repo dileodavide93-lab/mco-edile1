@@ -44,7 +44,7 @@ export const FAQ: React.FC<FAQProps> = ({ onRequestQuote }) => {
             <div className="relative z-10">
               <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Pronto a partire?</h3>
               <p className="text-zinc-400 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">Prenota un sopralluogo gratuito. Valutiamo insieme il tuo progetto, senza impegno.</p>
-              <button onClick={onRequestQuote} className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-red-500/25 hover:scale-105 transition-all text-sm sm:text-base">Prenota sopralluogo</button>
+              <button onClick={onRequestQuote} className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-red-600 to-red-500 text-white font-bold rounded-xl hover:shadow-lg hover:shadow-red-500/25 hover:scale-105 transition-all text-sm sm:text-base">Prenota sopralluogo</button>
             </div>
             <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-[80px] -mr-20 -mt-20"></div>
           </div>
@@ -58,7 +58,7 @@ export const FAQ: React.FC<FAQProps> = ({ onRequestQuote }) => {
                 className="w-full flex justify-between items-center p-5 sm:p-6 text-left group gap-4"
               >
                 <span className={`text-base sm:text-lg font-semibold transition-colors ${openIdx === idx ? 'text-white' : 'text-zinc-300 group-hover:text-white'}`}>{faq.q}</span>
-                <span className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-all text-sm font-bold ${openIdx === idx ? 'bg-gradient-to-br from-red-500 to-orange-500 text-white rotate-45' : 'bg-white/10 text-zinc-400'}`}>+</span>
+                <span className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-all text-sm font-bold ${openIdx === idx ? 'bg-gradient-to-br from-red-600 to-red-500 text-white rotate-45' : 'bg-white/10 text-zinc-400'}`}>+</span>
               </button>
               <div className={`overflow-hidden transition-all duration-300 ${openIdx === idx ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                 <p className="px-5 sm:px-6 pb-5 sm:pb-6 text-zinc-400 text-sm sm:text-base leading-relaxed">{faq.a}</p>
