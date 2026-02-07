@@ -7,7 +7,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
-    <footer className="py-12 md:py-16 px-4 sm:px-6 border-t border-white/5">
+    <footer className="py-12 md:py-16 px-4 sm:px-6 border-t border-white/5" style={{ paddingBottom: 'max(3rem, env(safe-area-inset-bottom))' }}>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-12 mb-10 md:mb-14">
           <div className="flex items-center">
@@ -32,9 +32,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/5">
           <p className="text-zinc-600 font-medium text-xs sm:text-sm text-center md:text-left">&copy; 2026 MCO EDILE S.R.L. P.IVA 01234567890</p>
           <div className="flex gap-3">
-            <a href="#" className="w-10 h-10 glass rounded-xl flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 transition-all text-sm font-bold">X</a>
-            <a href="#" className="w-10 h-10 glass rounded-xl flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 transition-all text-sm font-bold">IG</a>
-            <a href="#" className="w-10 h-10 glass rounded-xl flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 transition-all text-sm font-bold">IN</a>
+            <a href="#" className="w-11 h-11 glass rounded-xl flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 transition-all text-sm font-bold">X</a>
+            <a href="#" className="w-11 h-11 glass rounded-xl flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 transition-all text-sm font-bold">IG</a>
+            <a href="#" className="w-11 h-11 glass rounded-xl flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 transition-all text-sm font-bold">IN</a>
           </div>
         </div>
       </div>

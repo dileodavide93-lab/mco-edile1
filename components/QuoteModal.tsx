@@ -39,11 +39,12 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4" onClick={handleClose}>
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }} onClick={handleClose}>
       <div className="absolute inset-0 bg-black/80 backdrop-blur-md" />
 
       <div
-        className="relative bg-[#141414] rounded-t-2xl sm:rounded-3xl shadow-2xl w-full sm:max-w-lg max-h-[92vh] overflow-y-auto p-5 sm:p-8 md:p-10 border border-white/10"
+        className="relative bg-[#141414] rounded-t-2xl sm:rounded-3xl shadow-2xl w-full sm:max-w-lg overflow-y-auto p-5 sm:p-8 md:p-10 border border-white/10 overscroll-contain"
+        style={{ maxHeight: '92dvh', paddingBottom: 'max(1.25rem, env(safe-area-inset-bottom))' }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Mobile drag handle */}
@@ -51,7 +52,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({ isOpen, onClose }) => {
 
         <button
           onClick={handleClose}
-          className="absolute top-3 right-3 sm:top-4 sm:right-4 w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 hover:bg-white/10 transition-colors text-zinc-400 hover:text-white text-lg"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 hover:bg-white/10 transition-colors text-zinc-400 hover:text-white text-lg"
         >
           &times;
         </button>

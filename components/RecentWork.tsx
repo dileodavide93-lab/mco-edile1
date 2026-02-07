@@ -29,7 +29,7 @@ export const RecentWork: React.FC = () => {
         <div className="marquee-content flex gap-4 sm:gap-6">
           {[...images, ...images].map((src, i) => (
             <div key={i} className="flex-none w-[260px] h-[340px] sm:w-[380px] sm:h-[480px] rounded-2xl sm:rounded-3xl overflow-hidden group relative border border-white/10 hover:border-red-500/50 transition-colors">
-              <img src={src} alt="Interior" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src={src} alt="Interior" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
                 <div>
                   <p className="text-white font-bold text-lg">Progetto residenziale</p>
