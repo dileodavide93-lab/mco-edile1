@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/mco-edile1/',
+  base: process.env.GITHUB_PAGES ? '/mco-edile1/' : '/',
   server: {
     port: 3000,
   },
