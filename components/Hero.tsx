@@ -138,7 +138,7 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote, onNavigate }) => {
             </div>
 
             {/* Mini review */}
-            <a href="https://www.google.com/maps/place/MCO+Edile,+V.+Mirabello,+46,+20061+Carugate+MI/" target="_blank" rel="noopener noreferrer" className="block glass-light rounded-2xl p-4 mb-5 hover:bg-white/[0.12] transition-colors cursor-pointer">
+            <a href="https://www.google.com/maps/place/MCO+Edile/@45.545157,9.3472455,17z/data=!3m1!4b1!4m6!3m5!1s0x4786b71e0569279d:0xf6e3c83baf149bf0!8m2!3d45.5451533!4d9.3498204!16s%2Fg%2F11nrpp31x3?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="block glass-light rounded-2xl p-4 mb-5 hover:bg-white/[0.12] transition-colors cursor-pointer">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center text-[10px] font-bold flex-shrink-0">AC</div>
                 <div>
