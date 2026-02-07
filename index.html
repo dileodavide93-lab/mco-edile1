@@ -8,15 +8,45 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
       body {
-        font-family: 'Figtree', sans-serif;
-        background-color: #fcfcfc;
+        font-family: 'Inter', sans-serif;
+        background-color: #0a0a0a;
+        color: #fafafa;
       }
-      .text-italics {
-        font-style: italic;
-        font-family: serif;
+      .gradient-text {
+        background: linear-gradient(135deg, #ef4444 0%, #f97316 50%, #ef4444 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .glass-light {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .gradient-border {
+        position: relative;
+      }
+      .gradient-border::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 2px;
+        background: linear-gradient(135deg, #ef4444, #f97316, #ef4444);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
       }
       .marquee-container {
         overflow: hidden;
@@ -31,11 +61,19 @@
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
       }
-      .perspective-card {
-        transition: transform 0.3s ease;
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
       }
-      .perspective-card:hover {
-        transform: translateY(-10px) rotateX(2deg) rotateY(-2deg);
+      .float-animation {
+        animation: float 4s ease-in-out infinite;
+      }
+      @keyframes glow-pulse {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 0.8; }
+      }
+      .glow-pulse {
+        animation: glow-pulse 3s ease-in-out infinite;
       }
     </style>
   </head>

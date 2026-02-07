@@ -15,11 +15,11 @@ const App: React.FC = () => {
   const closeQuote = () => setQuoteOpen(false);
 
   return (
-    <div className="min-h-screen bg-[#fafafa] text-[#111] overflow-x-hidden">
-      {/* Grid Background Effect */}
-      <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-0">
-        {/* Fix: removed invalid 'size' property from style object */}
-        <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+    <div className="min-h-screen bg-[#0a0a0a] text-white overflow-x-hidden">
+      {/* Ambient glow effects */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-red-600/10 rounded-full blur-[150px] glow-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-orange-500/8 rounded-full blur-[120px] glow-pulse" style={{ animationDelay: '1.5s' }}></div>
       </div>
 
       <div className="relative z-10">

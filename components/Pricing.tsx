@@ -8,63 +8,76 @@ interface PricingProps {
 export const Pricing: React.FC<PricingProps> = ({ onRequestQuote }) => {
   return (
     <section id="pricing" className="py-20 md:py-32 px-4 sm:px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-14 md:mb-24">
-        <span className="text-xs font-black uppercase tracking-[0.3em] text-red-600">I Nostri Servizi</span>
-        <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mt-4 md:mt-6 mb-6 md:mb-8 tracking-tighter">
-          Soluzioni per ogni <br />
-          <span className="text-italics text-red-600">esigenza abitativa</span>
+      <div className="text-center mb-14 md:mb-20">
+        <span className="text-xs font-bold uppercase tracking-[0.3em] text-red-400">Servizi</span>
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mt-4 tracking-tight">
+          Cosa possiamo fare <span className="gradient-text">per te.</span>
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-stretch">
-        <div className="bg-white border-4 border-red-600 p-7 sm:p-10 md:p-14 rounded-2xl sm:rounded-[3rem] shadow-2xl flex flex-col h-full relative overflow-hidden">
-          <div className="absolute top-6 right-6 sm:top-10 sm:right-10">
-            <span className="px-3 py-1.5 sm:px-4 sm:py-2 bg-red-50 text-red-600 font-bold rounded-full text-[10px] sm:text-xs uppercase tracking-widest">Top Choice</span>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6 items-stretch">
+        {/* Main card */}
+        <div className="relative rounded-2xl sm:rounded-3xl p-7 sm:p-10 md:p-12 flex flex-col h-full overflow-hidden gradient-border glass">
+          <div className="absolute top-6 right-6 sm:top-8 sm:right-8">
+            <span className="px-3 py-1.5 bg-gradient-to-r from-red-500/20 to-orange-500/20 text-red-400 font-bold rounded-full text-[10px] uppercase tracking-widest border border-red-500/20">Piu richiesto</span>
           </div>
-          <div className="mb-8 sm:mb-12">
+          <div className="mb-8">
             <h3 className="text-2xl sm:text-4xl font-black mb-2">Ristrutturazione Totale</h3>
-            <p className="text-zinc-400 font-bold uppercase tracking-widest text-[10px] sm:text-xs">Trasforma completamente il tuo immobile</p>
+            <p className="text-zinc-500 font-medium text-sm">Trasforma completamente il tuo immobile</p>
           </div>
-          <div className="flex items-baseline gap-2 mb-8 sm:mb-12">
-            <span className="text-xl sm:text-3xl font-bold text-red-600 italic">Preventivo personalizzato gratuito</span>
+          <div className="mb-8">
+            <span className="text-xl sm:text-2xl font-bold gradient-text">Preventivo personalizzato gratuito</span>
           </div>
-          <div className="space-y-4 sm:space-y-6 mb-10 sm:mb-16 flex-grow">
+          <div className="space-y-4 mb-10 flex-grow">
             {[
               "Progettazione architettonica inclusa",
               "Sostituzione completa impianti",
               "Nuovi pavimenti e rivestimenti",
-              "Opere in cartongesso e controsoffitti",
-              "Pittura d'interni con prodotti bio",
-              "Pratiche fiscali per detrazioni (50%)",
-              "Pulizia finale post-cantiere inclusa"
+              "Cartongesso e controsoffitti",
+              "Pittura d'interni eco-friendly",
+              "Pratiche fiscali per detrazioni 50%",
+              "Pulizia post-cantiere inclusa"
             ].map((feature, i) => (
-              <div key={i} className="flex items-center gap-3 sm:gap-4 text-base sm:text-xl font-medium">
-                <div className="w-5 h-5 sm:w-6 sm:h-6 bg-red-100 rounded-full flex items-center justify-center text-red-600 text-sm sm:text-base flex-shrink-0">✓</div>
-                {feature}
+              <div key={i} className="flex items-center gap-3 text-sm sm:text-base">
+                <div className="w-5 h-5 rounded-full bg-gradient-to-br from-red-500/20 to-orange-500/20 flex items-center justify-center flex-shrink-0 border border-red-500/20">
+                  <svg className="text-red-400" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span className="text-zinc-300">{feature}</span>
               </div>
             ))}
           </div>
-          <button onClick={onRequestQuote} className="w-full py-4 sm:py-6 bg-red-600 text-white text-lg sm:text-2xl font-black rounded-xl sm:rounded-[2rem] hover:bg-red-700 hover:scale-[1.02] transition-all shadow-xl shadow-red-600/30">Richiedi Sopralluogo</button>
+          <button onClick={onRequestQuote} className="w-full py-4 sm:py-5 bg-gradient-to-r from-red-500 to-orange-500 text-white text-lg sm:text-xl font-bold rounded-xl sm:rounded-2xl hover:shadow-lg hover:shadow-red-500/25 hover:scale-[1.02] transition-all">Richiedi Sopralluogo</button>
         </div>
 
-        <div className="flex flex-col gap-5 md:gap-8">
-          <div className="bg-white p-8 sm:p-12 rounded-2xl sm:rounded-[3rem] border-2 border-dashed border-red-200 flex flex-col justify-center h-full group hover:bg-red-600 hover:text-white transition-all duration-500 cursor-pointer shadow-sm hover:shadow-2xl">
-            <div className="flex items-center gap-4 sm:gap-6 mb-5 sm:mb-8">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-50 border-2 border-red-600 rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl group-hover:scale-110 group-hover:bg-white transition-all flex-shrink-0">🛁</div>
-              <h3 className="text-2xl sm:text-3xl font-bold">Rifacimento Bagno</h3>
+        {/* Secondary cards */}
+        <div className="flex flex-col gap-5 md:gap-6">
+          <div className="glass rounded-2xl sm:rounded-3xl p-7 sm:p-10 flex flex-col justify-center h-full group hover:bg-white/[0.08] transition-all duration-300 cursor-pointer">
+            <div className="flex items-center gap-4 sm:gap-5 mb-4">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center border border-blue-500/20 flex-shrink-0 group-hover:scale-110 transition-transform">
+                <svg className="text-blue-400" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"></path><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"></path></svg>
+              </div>
+              <div>
+                <h3 className="text-2xl sm:text-3xl font-bold">Rifacimento Bagno</h3>
+                <p className="text-zinc-500 text-sm font-medium">Pronto in 7 giorni</p>
+              </div>
             </div>
-            <p className="text-base sm:text-xl text-zinc-500 group-hover:text-red-50 leading-relaxed">
-              Il tuo nuovo bagno di design pronto in soli 7 giorni lavorativi, materiali inclusi.
+            <p className="text-zinc-400 text-base sm:text-lg leading-relaxed">
+              Bagno nuovo di design in soli 7 giorni lavorativi. Materiali premium inclusi nel prezzo.
             </p>
           </div>
 
-          <div className="bg-white p-8 sm:p-12 rounded-2xl sm:rounded-[3rem] border-2 border-dashed border-red-200 flex flex-col justify-center h-full group hover:bg-red-600 hover:text-white transition-all duration-500 cursor-pointer shadow-sm hover:shadow-2xl">
-            <div className="flex items-center gap-4 sm:gap-6 mb-5 sm:mb-8">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-50 border-2 border-red-600 rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl group-hover:scale-110 group-hover:bg-white transition-all flex-shrink-0">🍳</div>
-              <h3 className="text-2xl sm:text-3xl font-bold">Smart Kitchen Pack</h3>
+          <div className="glass rounded-2xl sm:rounded-3xl p-7 sm:p-10 flex flex-col justify-center h-full group hover:bg-white/[0.08] transition-all duration-300 cursor-pointer">
+            <div className="flex items-center gap-4 sm:gap-5 mb-4">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center border border-amber-500/20 flex-shrink-0 group-hover:scale-110 transition-transform">
+                <svg className="text-amber-400" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12h6"></path><path d="M22 12h-6"></path><path d="M12 2v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 4.93-1.41 1.41"></path><path d="M12 12v8"></path><path d="m8 20 4-4 4 4"></path></svg>
+              </div>
+              <div>
+                <h3 className="text-2xl sm:text-3xl font-bold">Smart Kitchen</h3>
+                <p className="text-zinc-500 text-sm font-medium">Design + tecnologia</p>
+              </div>
             </div>
-            <p className="text-base sm:text-xl text-zinc-500 group-hover:text-red-50 leading-relaxed">
-              Rinnoviamo l'ambiente cucina ottimizzando spazi e impianti per le tecnologie moderne.
+            <p className="text-zinc-400 text-base sm:text-lg leading-relaxed">
+              Cucina smart ottimizzata per spazi e impianti moderni. Funzionale e bella da vivere.
             </p>
           </div>
         </div>
