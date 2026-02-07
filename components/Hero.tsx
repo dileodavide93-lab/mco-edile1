@@ -12,11 +12,8 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote }) => {
   return (
     <section className="pt-6 pb-16 md:pt-8 md:pb-32 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
       <nav className="flex justify-between items-center mb-12 md:mb-20">
-        <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center shadow-lg shadow-red-500/25">
-            <div className="w-4 h-4 bg-white rounded-sm rotate-45"></div>
-          </div>
-          <span className="text-xl sm:text-2xl font-black tracking-tight">MCO EDILE</span>
+        <div className="flex items-center">
+          <img src="/logo.jpeg" alt="MCO EDILE" className="h-10 sm:h-12 w-auto" />
         </div>
 
         {/* Desktop nav */}

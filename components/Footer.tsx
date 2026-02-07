@@ -6,11 +6,8 @@ export const Footer: React.FC = () => {
     <footer className="py-12 md:py-16 px-4 sm:px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-12 mb-10 md:mb-14">
-          <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center">
-              <div className="w-4 h-4 bg-white rounded-sm rotate-45"></div>
-            </div>
-            <span className="text-2xl sm:text-3xl font-black tracking-tight">MCO EDILE</span>
+          <div className="flex items-center">
+            <img src="/logo.jpeg" alt="MCO EDILE" className="h-10 sm:h-12 w-auto" />
           </div>
 
           <div className="flex flex-wrap gap-x-6 gap-y-3 sm:gap-x-10">
