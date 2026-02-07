@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 
 interface HeroProps {
   onRequestQuote: () => void;
+  onNavigate: (page: 'home' | 'chi-siamo') => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onRequestQuote }) => {
+export const Hero: React.FC<HeroProps> = ({ onRequestQuote, onNavigate }) => {
   const [showPhone, setShowPhone] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -23,7 +24,7 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote }) => {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-3">
-          <button className="px-5 py-2.5 text-zinc-400 font-semibold hover:text-white transition-colors">Chi Siamo</button>
+          <button onClick={() => onNavigate('chi-siamo')} className="px-5 py-2.5 text-zinc-400 font-semibold hover:text-white transition-colors">Chi Siamo</button>
           <button className="px-5 py-2.5 text-zinc-400 font-semibold hover:text-white transition-colors">Servizi</button>
           {showPhone ? (
             <a href="tel:+393920244301" className="px-5 py-2.5 glass rounded-xl font-semibold flex items-center gap-2 text-white transition-all">
@@ -61,7 +62,7 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote }) => {
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             Chiamaci ora
           </a>
-          <button className="w-full py-3.5 text-zinc-400 font-semibold rounded-xl text-base hover:text-white transition-colors">Chi Siamo</button>
+          <button onClick={() => { onNavigate('chi-siamo'); setMobileMenuOpen(false); }} className="w-full py-3.5 text-zinc-400 font-semibold rounded-xl text-base hover:text-white transition-colors">Chi Siamo</button>
         </div>
       )}
 

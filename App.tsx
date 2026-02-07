@@ -8,11 +8,21 @@ import { Pricing } from './components/Pricing';
 import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
 import { QuoteModal } from './components/QuoteModal';
+import { ChiSiamo } from './components/ChiSiamo';
+
+type Page = 'home' | 'chi-siamo';
 
 const App: React.FC = () => {
   const [quoteOpen, setQuoteOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState<Page>('home');
+
   const openQuote = () => setQuoteOpen(true);
   const closeQuote = () => setQuoteOpen(false);
+
+  const navigateTo = (page: Page) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white overflow-x-hidden">
@@ -23,13 +33,19 @@ const App: React.FC = () => {
       </div>
 
       <div className="relative z-10">
-        <Hero onRequestQuote={openQuote} />
-        <HowItWorks />
-        <Benefits />
-        <RecentWork />
-        <Pricing onRequestQuote={openQuote} />
-        <FAQ onRequestQuote={openQuote} />
-        <Footer />
+        {currentPage === 'home' ? (
+          <>
+            <Hero onRequestQuote={openQuote} onNavigate={navigateTo} />
+            <HowItWorks />
+            <Benefits />
+            <RecentWork />
+            <Pricing onRequestQuote={openQuote} />
+            <FAQ onRequestQuote={openQuote} />
+            <Footer onNavigate={navigateTo} />
+          </>
+        ) : (
+          <ChiSiamo onNavigate={navigateTo} onRequestQuote={openQuote} />
+        )}
       </div>
 
       <QuoteModal isOpen={quoteOpen} onClose={closeQuote} />

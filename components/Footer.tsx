@@ -1,7 +1,11 @@
 
 import React from 'react';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onNavigate?: (page: 'home' | 'chi-siamo') => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
     <footer className="py-12 md:py-16 px-4 sm:px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
@@ -16,6 +20,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="flex flex-wrap gap-x-6 gap-y-3 sm:gap-x-10">
+            <button onClick={() => onNavigate?.('chi-siamo')} className="text-sm sm:text-base font-semibold text-zinc-400 hover:text-white transition-colors">Chi Siamo</button>
             <a href="#pricing" className="text-sm sm:text-base font-semibold text-zinc-400 hover:text-white transition-colors">Servizi</a>
             <a href="#" className="text-sm sm:text-base font-semibold text-zinc-400 hover:text-white transition-colors">Portfolio</a>
             <a href="#" className="text-sm sm:text-base font-semibold text-zinc-400 hover:text-white transition-colors">Lavora con noi</a>
