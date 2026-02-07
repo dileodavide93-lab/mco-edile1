@@ -88,25 +88,54 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote }) => {
         <div className="relative group">
           <div className="absolute -inset-4 bg-gradient-to-tr from-red-400 via-red-600 to-red-800 rounded-[2rem] opacity-20 blur-2xl group-hover:opacity-30 transition-opacity"></div>
           <div className="relative bg-white border-4 border-red-600 p-5 sm:p-8 rounded-2xl sm:rounded-[2rem] shadow-2xl overflow-hidden perspective-card">
-            <div className="flex justify-between items-start mb-6 sm:mb-8">
-              <div>
-                <span className="px-3 py-1 bg-red-600 text-white text-[10px] font-bold rounded-full uppercase tracking-widest">Qualità Certificata</span>
-                <h3 className="text-2xl sm:text-3xl font-bold mt-3 sm:mt-4">Pronto per il Cambiamento?</h3>
-              </div>
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-50 rounded-2xl flex items-center justify-center text-2xl sm:text-3xl flex-shrink-0">
-                🏗️
+            <div className="flex justify-between items-start mb-5 sm:mb-6">
+              <span className="px-3 py-1 bg-red-600 text-white text-[10px] font-bold rounded-full uppercase tracking-widest">I Nostri Numeri</span>
+              <div className="flex -space-x-2">
+                <div className="w-8 h-8 sm:w-9 sm:h-9 bg-red-100 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-red-600">MC</div>
+                <div className="w-8 h-8 sm:w-9 sm:h-9 bg-zinc-800 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-white">+</div>
               </div>
             </div>
-            <p className="text-zinc-500 text-base sm:text-lg mb-6 sm:mb-8">Dalla demolizione all'arredamento finale, ci occupiamo di tutto noi.</p>
-            <div className="rounded-2xl overflow-hidden mb-6 sm:mb-8 border border-zinc-100 shadow-inner">
-               <img src="https://images.unsplash.com/photo-1556912177-c54030639a6d?auto=format&fit=crop&q=80&w=800" alt="Cantiere Pulito" className="w-full h-40 sm:h-48 object-cover" />
+
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-5 sm:mb-6">
+              <div className="bg-red-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 text-center">
+                <p className="text-2xl sm:text-3xl font-black text-red-600">200+</p>
+                <p className="text-zinc-500 text-xs sm:text-sm font-medium mt-1">Progetti completati</p>
+              </div>
+              <div className="bg-red-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 text-center">
+                <p className="text-2xl sm:text-3xl font-black text-red-600">15+</p>
+                <p className="text-zinc-500 text-xs sm:text-sm font-medium mt-1">Anni di esperienza</p>
+              </div>
+              <div className="bg-red-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 text-center">
+                <p className="text-2xl sm:text-3xl font-black text-red-600">98%</p>
+                <p className="text-zinc-500 text-xs sm:text-sm font-medium mt-1">Clienti soddisfatti</p>
+              </div>
+              <div className="bg-red-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 text-center">
+                <p className="text-2xl sm:text-3xl font-black text-red-600">10</p>
+                <p className="text-zinc-500 text-xs sm:text-sm font-medium mt-1">Anni di garanzia</p>
+              </div>
             </div>
-            <button className="w-full py-3 sm:py-4 bg-red-600 text-white font-bold rounded-xl hover:bg-red-700 transition-colors text-sm sm:text-base">Guarda i nostri Servizi</button>
+
+            <div className="flex items-center gap-3 p-3 sm:p-4 bg-zinc-50 rounded-xl sm:rounded-2xl mb-5 sm:mb-6">
+              <div className="flex -space-x-1.5">
+                <div className="w-7 h-7 bg-green-100 rounded-full border-2 border-white flex items-center justify-center text-green-600 text-[10px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div className="w-7 h-7 bg-green-100 rounded-full border-2 border-white flex items-center justify-center text-green-600 text-[10px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div className="w-7 h-7 bg-green-100 rounded-full border-2 border-white flex items-center justify-center text-green-600 text-[10px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+              </div>
+              <p className="text-xs sm:text-sm text-zinc-600 font-medium">Prezzo fisso garantito, zero sorprese</p>
+            </div>
+
+            <button onClick={onRequestQuote} className="w-full py-3 sm:py-4 bg-red-600 text-white font-bold rounded-xl hover:bg-red-700 transition-colors text-sm sm:text-base">Richiedi Preventivo Gratuito</button>
           </div>
 
           <div className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-6 bg-white border-2 border-red-600 p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-xl flex items-center gap-2 sm:gap-3 animate-pulse max-w-[200px] sm:max-w-none">
-            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-red-600 rounded-full flex-shrink-0"></div>
-            <span className="font-bold text-xs sm:text-sm leading-tight">Sconto 50% su Progettazione 3D</span>
+            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full flex-shrink-0"></div>
+            <span className="font-bold text-xs sm:text-sm leading-tight">3 sopralluoghi prenotati oggi</span>
           </div>
         </div>
       </div>
