@@ -39,12 +39,11 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }} onClick={handleClose}>
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4" onClick={handleClose}>
       <div className="absolute inset-0 bg-black/80 backdrop-blur-md" />
 
       <div
-        className="relative bg-[#141414] rounded-t-2xl sm:rounded-3xl shadow-2xl w-full sm:max-w-lg overflow-y-auto p-5 sm:p-8 md:p-10 border border-white/10 overscroll-contain"
-        style={{ maxHeight: '92dvh', paddingBottom: 'max(1.25rem, env(safe-area-inset-bottom))' }}
+        className="relative bg-[#141414] rounded-t-2xl sm:rounded-3xl shadow-2xl w-full sm:max-w-lg max-h-[90vh] overflow-y-auto p-5 pb-8 sm:p-8 md:p-10 border border-white/10 overscroll-contain"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Mobile drag handle */}

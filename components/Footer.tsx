@@ -7,7 +7,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
-    <footer className="py-12 md:py-16 px-4 sm:px-6 border-t border-white/5" style={{ paddingBottom: 'max(3rem, env(safe-area-inset-bottom))' }}>
+    <footer className="py-12 md:py-16 pb-16 px-4 sm:px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-12 mb-10 md:mb-14">
           <div className="flex items-center">
