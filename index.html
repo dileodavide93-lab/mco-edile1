@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>MCO EDILE | Ristrutturazioni di Design</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -88,10 +87,23 @@
       .glow-pulse {
         animation: glow-pulse 3s ease-in-out infinite;
       }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; }
+      }
     </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0a0a0a">
+        <svg viewBox="0 0 220 80" style="height:48px;width:auto;animation:pulse 2s ease-in-out infinite" aria-label="MCO EDILE">
+          <polygon points="110,2 170,38 50,38" fill="#ef4444" />
+          <line x1="42" y1="40" x2="178" y2="40" stroke="#ef4444" stroke-width="3" />
+          <text x="18" y="72" font-family="Georgia,'Times New Roman',serif" font-weight="bold" font-size="38" fill="white" letter-spacing="-1">MCO</text>
+          <text x="120" y="64" font-family="Inter,Arial,sans-serif" font-weight="600" font-size="22" fill="white" letter-spacing="2">EDILE</text>
+        </svg>
+      </div>
+    </div>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>
