@@ -32,35 +32,35 @@ export const FAQ: React.FC<FAQProps> = ({ onRequestQuote }) => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section className="py-32 px-6 border-t border-zinc-200">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
+    <section className="py-20 md:py-32 px-4 sm:px-6 border-t border-zinc-200">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
         <div>
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-12">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter mb-8 md:mb-12">
             Domande <br />
             <span className="text-italics text-red-600">frequenti</span>
           </h2>
-          <div className="bg-red-600 text-white p-12 rounded-[3rem] relative overflow-hidden shadow-2xl shadow-red-600/20">
+          <div className="bg-red-600 text-white p-8 sm:p-12 rounded-2xl sm:rounded-[3rem] relative overflow-hidden shadow-2xl shadow-red-600/20">
              <div className="relative z-10">
-                <h3 className="text-3xl font-bold mb-6">Pronto a iniziare?</h3>
-                <p className="text-red-50 text-lg mb-8">Prenota un sopralluogo tecnico senza impegno. Valuteremo insieme il tuo progetto.</p>
-                <button onClick={onRequestQuote} className="px-8 py-4 bg-white text-red-600 font-bold rounded-xl hover:scale-105 transition-transform">Richiedi Sopralluogo</button>
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Pronto a iniziare?</h3>
+                <p className="text-red-50 text-base sm:text-lg mb-6 sm:mb-8">Prenota un sopralluogo tecnico senza impegno. Valuteremo insieme il tuo progetto.</p>
+                <button onClick={onRequestQuote} className="px-6 py-3 sm:px-8 sm:py-4 bg-white text-red-600 font-bold rounded-xl hover:scale-105 transition-transform text-sm sm:text-base">Richiedi Sopralluogo</button>
              </div>
              <div className="absolute top-0 right-0 w-64 h-64 bg-red-800 rounded-full blur-3xl opacity-50 -mr-32 -mt-32"></div>
           </div>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, idx) => (
-            <div key={idx} className="border-b-2 border-red-50 pb-4">
+            <div key={idx} className="border-b-2 border-red-50 pb-3 sm:pb-4">
               <button
                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                className="w-full flex justify-between items-center py-6 text-left group"
+                className="w-full flex justify-between items-center py-4 sm:py-6 text-left group gap-4"
               >
-                <span className={`text-2xl font-bold group-hover:text-red-600 transition-colors ${openIdx === idx ? 'text-red-600' : ''}`}>{faq.q}</span>
-                <span className={`text-2xl transform transition-transform text-red-600 ${openIdx === idx ? 'rotate-45' : ''}`}>+</span>
+                <span className={`text-lg sm:text-2xl font-bold group-hover:text-red-600 transition-colors ${openIdx === idx ? 'text-red-600' : ''}`}>{faq.q}</span>
+                <span className={`text-xl sm:text-2xl transform transition-transform text-red-600 flex-shrink-0 ${openIdx === idx ? 'rotate-45' : ''}`}>+</span>
               </button>
-              <div className={`overflow-hidden transition-all duration-300 ${openIdx === idx ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'}`}>
-                <p className="text-xl text-zinc-500 leading-relaxed">{faq.a}</p>
+              <div className={`overflow-hidden transition-all duration-300 ${openIdx === idx ? 'max-h-96 opacity-100 pb-4 sm:pb-6' : 'max-h-0 opacity-0'}`}>
+                <p className="text-base sm:text-xl text-zinc-500 leading-relaxed">{faq.a}</p>
               </div>
             </div>
           ))}
