@@ -11,7 +11,23 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote, onNavigate }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <section className="pt-6 pb-16 md:pt-8 md:pb-32 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+    <section className="relative">
+      {/* Background video */}
+      <div className="absolute inset-0 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+          poster="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1920"
+        >
+          <source src="https://cdn.coverr.co/videos/coverr-interior-renovation-6673/1080p.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-[#0a0a0a]/70 to-[#0a0a0a]"></div>
+      </div>
+
+      <div className="relative z-10 pt-6 pb-16 md:pt-8 md:pb-32 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
       <nav className="flex justify-between items-center mb-12 md:mb-20">
         <div className="flex items-center">
           <svg viewBox="0 0 220 80" className="h-10 sm:h-12 w-auto" aria-label="MCO EDILE">
@@ -158,6 +174,7 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote, onNavigate }) => {
             <span className="font-semibold text-xs sm:text-sm leading-tight text-zinc-300">3 sopralluoghi prenotati oggi</span>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
