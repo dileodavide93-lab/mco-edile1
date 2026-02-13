@@ -97,29 +97,7 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote, onNavigate }) => {
           <p className="text-lg sm:text-xl text-zinc-400 max-w-lg mb-8 md:mb-10 leading-relaxed">
             Ristrutturazioni complete, dal progetto alle chiavi in mano. Noi ci pensiamo a tutto, tu ti godi il risultato.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 md:mb-12">
-            <button onClick={onRequestQuote} className="px-8 py-4 sm:px-10 sm:py-5 bg-gradient-to-r from-red-600 to-red-500 text-white text-lg sm:text-xl font-bold rounded-2xl hover:scale-105 transition-all shadow-xl shadow-red-500/20">Inizia ora</button>
-            <button className="flex items-center justify-center gap-3 px-6 py-4 glass rounded-2xl cursor-pointer hover:bg-white/10 transition-colors group">
-              <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors flex-shrink-0">
-                <svg className="text-red-400" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-              </div>
-              <span className="font-semibold text-zinc-300 text-sm sm:text-base">Come funziona</span>
-            </button>
-          </div>
-
-          {/* Social proof */}
-          <div className="flex items-center gap-4">
-            <div className="flex -space-x-2">
-              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-red-500 to-red-400 border-2 border-[#0a0a0a] flex items-center justify-center text-[10px] font-bold">MR</div>
-              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 border-2 border-[#0a0a0a] flex items-center justify-center text-[10px] font-bold">LB</div>
-              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 border-2 border-[#0a0a0a] flex items-center justify-center text-[10px] font-bold">GV</div>
-              <div className="w-9 h-9 rounded-full bg-zinc-700 border-2 border-[#0a0a0a] flex items-center justify-center text-[10px] font-bold text-zinc-300">+197</div>
-            </div>
-            <div>
-              <div className="flex gap-0.5 text-red-400 text-sm">{'★'.repeat(5)}</div>
-              <p className="text-zinc-500 text-xs font-medium">200+ clienti soddisfatti</p>
-            </div>
-          </div>
+          <button onClick={onRequestQuote} className="px-8 py-4 sm:px-10 sm:py-5 bg-gradient-to-r from-red-600 to-red-500 text-white text-lg sm:text-xl font-bold rounded-2xl hover:scale-105 transition-all shadow-xl shadow-red-500/20">Inizia ora</button>
         </div>
 
         {/* Stats card */}
