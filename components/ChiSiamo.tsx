@@ -79,7 +79,12 @@ export const ChiSiamo: React.FC<ChiSiamoProps> = ({ onNavigate, onRequestQuote }
       {/* Nav bar */}
       <nav className="flex justify-between items-center px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto pt-6 md:pt-8">
         <button onClick={() => onNavigate('home')} className="flex items-center cursor-pointer">
-          <img src={new URL('../logo.png', import.meta.url).href} alt="MCO EDILE" className="h-12 sm:h-14 w-auto rounded-lg" />
+          <svg viewBox="0 0 220 80" className="h-10 sm:h-12 w-auto" aria-label="MCO EDILE">
+            <polygon points="110,2 170,38 50,38" fill="#ef4444" />
+            <line x1="42" y1="40" x2="178" y2="40" stroke="#ef4444" strokeWidth="3" />
+            <text x="18" y="72" fontFamily="Georgia, 'Times New Roman', serif" fontWeight="bold" fontSize="38" fill="white" letterSpacing="-1">MCO</text>
+            <text x="120" y="64" fontFamily="'Inter', Arial, sans-serif" fontWeight="600" fontSize="22" fill="white" letterSpacing="2">EDILE</text>
+          </svg>
         </button>
 
         <div className="flex items-center gap-3">
